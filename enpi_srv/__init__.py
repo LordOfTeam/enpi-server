@@ -11,7 +11,11 @@ from enpi_srv.controllers.rest.tickets import TicketFormView, SMSSecurityCode
 
 def create_app(env=None):
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object('enpi_srv.config.DevConfig')
+
+    if os.environ.get('FLASK_ENV') == 'development':
+        app.config.from_object('enpi_srv.config.DevConfig')
+    else:
+        app.config.from_object('enpi_srv.config.PrdConfig')
 
     # Onput Log
     formatter = logging.Formatter(
