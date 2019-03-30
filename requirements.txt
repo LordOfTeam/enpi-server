@@ -1,0 +1,5 @@
+Flask==1.0.2
+Flask-Mail==0.9.1
+Flask-RESTful==0.3.7
+python-dotenv==0.10.1
+aliyun-python-sdk-core-v3==2.13.3

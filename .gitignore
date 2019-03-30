@@ -1,0 +1,6 @@
+py3.6_env/
+.idea/
+.flaskenv
+activate
+config.py
+*.pyc
